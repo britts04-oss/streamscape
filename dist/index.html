@@ -6,6 +6,7 @@
   <meta name="description" content="Streamscape — a cinematic streaming catalogue demo.">
   <title>Streamscape</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media.css">
 </head>
 <body>
   <header class="topbar" id="topbar">
@@ -28,12 +29,12 @@
     <section class="hero" aria-labelledby="heroTitle">
       <div class="aurora" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="eyebrow">A STREAMSCAPE ORIGINAL</p>
-        <h1 id="heroTitle">Beyond the<br><em>Last Light</em></h1>
-        <div class="meta"><span class="match">98% Match</span><span>2026</span><span class="rating">16+</span><span>1 Season</span><span>4K</span></div>
-        <p class="synopsis">At the edge of a silent solar system, a cartographer discovers a signal that maps places no human has ever seen—and one place that should not exist.</p>
+        <p class="eyebrow">PUBLIC DOMAIN SPOTLIGHT</p>
+        <h1 id="heroTitle">The<br><em>General</em></h1>
+        <div class="meta"><span class="match">Classic</span><span>1926</span><span class="rating">All</span><span>78 min</span><span>Silent</span></div>
+        <p class="synopsis">Buster Keaton’s landmark action comedy follows a railroad engineer pursuing his stolen locomotive across Civil War lines.</p>
         <div class="hero-buttons">
-          <button class="button primary" data-play="Beyond the Last Light"><span>▶</span> Play</button>
+          <button class="button primary" data-play="0"><span>▶</span> Play</button>
           <button class="button secondary" data-details="0"><span>ⓘ</span> More Info</button>
         </div>
       </div>
@@ -71,14 +72,9 @@
   </dialog>
 
   <div class="player" id="player" hidden>
-    <div class="player-orb" aria-hidden="true"></div>
     <button id="closePlayer" aria-label="Close player">×</button>
-    <div class="player-center">
-      <div class="play-mark">▶</div>
-      <h2 id="playerTitle"></h2>
-      <p>Demo playback · No media or DRM content is loaded</p>
-    </div>
-    <div class="player-controls"><span>▶</span><div class="progress"><i></i></div><span>00:00</span><span class="spacer"></span><span>◫</span><span>⛶</span></div>
+    <div class="player-frame"><iframe id="playerFrame" title="Movie player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="player-credit"><h2 id="playerTitle"></h2><p id="playerSource"></p></div>
   </div>
 
   <footer><p>Streamscape is an original interface demo. No affiliation with Netflix.</p></footer>
