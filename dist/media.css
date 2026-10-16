@@ -5,11 +5,6 @@
   background-position: center;
 }
 .poster::before, .poster::after { content: none; }
-.poster { position: relative; overflow: hidden; }
-.hover-preview { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none; transform: scale(1.02); }
-.preview-badge { position: absolute; right: .55rem; bottom: .5rem; z-index: 2; padding: .24rem .45rem; border-radius: 999px; background: rgba(0,0,0,.72); color: #fff; font-size: .62rem; letter-spacing: .04em; opacity: 0; transition: opacity .2s ease; }
-.card:hover .preview-badge { opacity: .82; }
-.card.previewing .preview-badge { opacity: 0; }
 .detail-art {
   background-color: #20232a;
   background-image: linear-gradient(0deg, #17191e, transparent 62%), var(--art);
