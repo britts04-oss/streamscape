@@ -37,3 +37,6 @@
 }
 .player-credit h2 { margin: 0; font-size: 1.1rem; }
 .player-credit p { margin: 0; color: #858993; font-size: .82rem; }
+.detail-license { color: #c8cad0; font-size: .9rem; line-height: 1.5; }
+.source-link { color: #78d6ff; font-size: .9rem; text-decoration: none; }
+.source-link:hover, .source-link:focus-visible { text-decoration: underline; }
