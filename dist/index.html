@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Streamscape — a cinematic streaming catalogue demo.">
+  <title>Streamscape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#home" aria-label="Streamscape home"><span>S</span>STREAMSCAPE</a>
+    <nav aria-label="Primary navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#series">Series</a>
+      <a href="#films">Films</a>
+      <a href="#new">New & Popular</a>
+      <a href="#list">My List</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-button" id="searchButton" aria-label="Search">⌕</button>
+      <button class="icon-button" aria-label="Notifications">◌</button>
+      <button class="avatar" aria-label="Open profile menu">BR</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">A STREAMSCAPE ORIGINAL</p>
+        <h1 id="heroTitle">Beyond the<br><em>Last Light</em></h1>
+        <div class="meta"><span class="match">98% Match</span><span>2026</span><span class="rating">16+</span><span>1 Season</span><span>4K</span></div>
+        <p class="synopsis">At the edge of a silent solar system, a cartographer discovers a signal that maps places no human has ever seen—and one place that should not exist.</p>
+        <div class="hero-buttons">
+          <button class="button primary" data-play="Beyond the Last Light"><span>▶</span> Play</button>
+          <button class="button secondary" data-details="0"><span>ⓘ</span> More Info</button>
+        </div>
+      </div>
+      <div class="hero-fade" aria-hidden="true"></div>
+    </section>
+
+    <section class="catalog" id="catalog" aria-label="Streaming catalogue"></section>
+  </main>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <label class="sr-only" for="searchInput">Search titles</label>
+      <input id="searchInput" type="search" placeholder="Titles, genres, people" autocomplete="off">
+      <button id="closeSearch" aria-label="Close search">×</button>
+    </div>
+    <p id="searchStatus" aria-live="polite"></p>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <dialog id="detailsDialog" class="details-dialog">
+    <button class="dialog-close" id="closeDetails" aria-label="Close details">×</button>
+    <div class="detail-art" id="detailArt"></div>
+    <div class="detail-body">
+      <p class="eyebrow">STREAMSCAPE FEATURE</p>
+      <h2 id="detailTitle"></h2>
+      <div class="meta" id="detailMeta"></div>
+      <p id="detailDescription"></p>
+      <div class="hero-buttons">
+        <button class="button primary" id="dialogPlay"><span>▶</span> Play</button>
+        <button class="round-button" id="listToggle" aria-label="Add to My List">＋</button>
+      </div>
+      <p class="detail-tags"><strong>Genres:</strong> <span id="detailGenres"></span></p>
+    </div>
+  </dialog>
+
+  <div class="player" id="player" hidden>
+    <div class="player-orb" aria-hidden="true"></div>
+    <button id="closePlayer" aria-label="Close player">×</button>
+    <div class="player-center">
+      <div class="play-mark">▶</div>
+      <h2 id="playerTitle"></h2>
+      <p>Demo playback · No media or DRM content is loaded</p>
+    </div>
+    <div class="player-controls"><span>▶</span><div class="progress"><i></i></div><span>00:00</span><span class="spacer"></span><span>◫</span><span>⛶</span></div>
+  </div>
+
+  <footer><p>Streamscape is an original interface demo. No affiliation with Netflix.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
