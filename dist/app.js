@@ -26,7 +26,62 @@ const titles=[
  {title:'Backyard Squirrel Maze 1.0',year:2020,score:'Official Upload',rating:'YouTube',genre:'Creator · Science · Engineering',runtime:'20 min',desc:'Mark Rober designs an elaborate backyard obstacle course to test the ingenuity of neighborhood squirrels.',art:yt('hFZFjoX2cGg'),embed:'https://www.youtube-nocookie.com/embed/hFZFjoX2cGg?autoplay=1',source:'YouTube · Mark Rober official channel',sourceUrl:'https://www.youtube.com/watch?v=hFZFjoX2cGg',license:'Standard YouTube copyright terms apply. Watching and embedding are supported; reuse or re-uploading requires permission from the rights holder.'},
  {title:'Water Bottle Flip Edition',year:2016,score:'Official Upload',rating:'YouTube',genre:'Creator · Sports · Trick Shots',runtime:'6 min',desc:'Dude Perfect turns the viral bottle-flip challenge into a fast-paced series of precision trick shots.',art:yt('P8V_bx0L4RY'),embed:'https://www.youtube-nocookie.com/embed/P8V_bx0L4RY?autoplay=1',source:'YouTube · Dude Perfect official channel',sourceUrl:'https://www.youtube.com/watch?v=P8V_bx0L4RY',license:'Standard YouTube copyright terms apply. Watching and embedding are supported; reuse or re-uploading requires permission from the rights holder.'}
 ];
-const rows=[['Creator Spotlight · Official Uploads',[19,20,21,22]],['Reaction-Friendly · Creative Commons',[0,1,2,3,4,5,6,7,8]],['Public-Domain Classics',[9,10,12,13,14]],['Silent-Era Essentials',[9,10,11]],['Comedy & Animation',[0,2,4,5,15,16,17,18]],['Adventure Through the Decades',[1,3,6,7,8,13,14,9]],['Short Films',[0,1,2,5,6,7,8,11,15,16,17,18]]];
+const creatorLibrary=[
+ ['Dt36OGjw26Y','Don’t Quit','Kai Cenat','Creator · Comedy · Vlog'],
+ ['Hhl74xWssbU','Streamer University Los Angeles Applications','Kai Cenat','Creator · Streaming · Community'],
+ ['ACoJ17Pxkfs','Streamer University New York Applications','Kai Cenat','Creator · Streaming · Community'],
+ ['rkdzxRaI68g','I Quit','Kai Cenat','Creator · Comedy · Vlog'],
+ ['11hY9shQ0vY','Bringing MrBeast’s Credit Card to the Hood!','Kai Cenat','Creator · Comedy · Challenge'],
+ ['plN7JMbadRg','Eat Everything in a Grocery Store, Win $1,000,000','MrBeast','Creator · Competition · Challenge'],
+ ['v9QtM6qnG50','I Built a City to Save Kids from Illegal Labor','MrBeast','Creator · Documentary · Philanthropy'],
+ ['gTKS8SAwUzE','I Survived the Most Extreme Places on Earth','MrBeast','Creator · Adventure · Challenge'],
+ ['Qtl8lJwbd4g','Escape 100 Cops, Win $500,000','MrBeast','Creator · Competition · Challenge'],
+ ['Af6i6ChAVTw','Last to Leave Mansion, Keeps It','MrBeast','Creator · Competition · Challenge'],
+ ['_L1Rim7-IPo','Last Cheater Standing Wins $10,000','Mark Rober','Creator · Science · Competition'],
+ ['h0EGCnBjTVk','I Outsmarted Pro Car Thieves','Mark Rober','Creator · Engineering · Investigation'],
+ ['S7UM5lSgAg8','I Engineered the Perfect First Date','Mark Rober','Creator · Engineering · Comedy'],
+ ['Xg1ro-zG7AM','Engineers vs. Junkyard RC Car Death Match','Mark Rober','Creator · Engineering · Competition'],
+ ['jjpjjcMeujM','Ronaldo vs. My Unbeatable Goalie Robot','Mark Rober','Creator · Engineering · Sports'],
+ ['teW7A5EoP_o','Rocket League in Real Life','Dude Perfect','Creator · Sports · Challenge'],
+ ['LVhFuyABxBE','Football, but Nothing Is Normal','Dude Perfect','Creator · Sports · Comedy'],
+ ['6BjR_UP2dzM','School Stereotypes','Dude Perfect','Creator · Comedy · Sketch'],
+ ['MhXPm7JcWCo','All Sports Golf Battle 7','Dude Perfect','Creator · Sports · Competition'],
+ ['IRaXnX_Dufo','Overtime 250 Is Here','Dude Perfect','Creator · Sports · Variety'],
+ ['QVv3mQzlrN0','Apple Homeview Impressions: Not Convinced!','MKBHD','Creator · Technology · Review'],
+ ['_0G4OG39XjI','What Is a Googlebook?','MKBHD','Creator · Technology · Review'],
+ ['3iRUwVzRDZQ','Xiaomi 18 Fold: How Does This Happen?','MKBHD','Creator · Technology · Review'],
+ ['e1q-TuHdc4Y','Dear YouTube!','MKBHD','Creator · Technology · Commentary'],
+ ['rayrrXot17M','Nothing Headphone 1 Pro','MKBHD','Creator · Technology · Review'],
+ ['oKt2FWBFmik','Our Secret Project Is Finally Out','Yes Theory','Creator · Adventure · Community'],
+ ['Rtj5-iql5FE','What It’s Like in America’s Poorest Region','Yes Theory','Creator · Travel · Documentary'],
+ ['W_s81Dn4uEI','Why Is This Piece of America Still Owned by France?','Yes Theory','Creator · Travel · Documentary'],
+ ['NbCf2La5SD8','Buying a €1 House in Italy — Is It a Scam?','Yes Theory','Creator · Travel · Investigation'],
+ ['O021eXJ7qfE','Europe’s Most Remote Island Village','Yes Theory','Creator · Travel · Documentary'],
+ ['Q_Y0S5c4j4M','Zach King’s Best Magic Videos of 2026','Zach King','Creator · Magic · Compilation'],
+ ['qNd2EHbWFho','I Survived One Year in an Arcade!','Zach King','Creator · Magic · Challenge'],
+ ['NYUWVjyESIQ','Zach King vs. Dude Perfect: Ultimate Trick Shots','Zach King','Creator · Magic · Sports'],
+ ['HUX-LRNrsv4','Can VFX Artists Beat AI?','Zach King','Creator · VFX · Technology'],
+ ['LYb8jCNax_Q','I Made an Action Movie to Help My Friend Propose!','Zach King','Creator · VFX · Film'],
+ ['_LHh3BS9Xx4','I Hid in MrBeast’s Grocery Store','Airrack','Creator · Challenge · Vlog'],
+ ['XDH7pgXAtRk','I Got a Real Job at McDonald’s','Airrack','Creator · Challenge · Vlog'],
+ ['cr642ejN_60','I Secretly Lived in a Five-Star Hotel','Airrack','Creator · Challenge · Travel'],
+ ['5gXyaw1RWek','Who Can Secretly Live in a Mall the Longest?','Airrack','Creator · Competition · Challenge'],
+ ['DJQmGYH7hdU','I “Cheated” Until the Carnival Banned Me','Airrack','Creator · Challenge · Comedy'],
+ ['BhTqWKNO-aA','Sidemen £2,000 Car Challenge','Sidemen','Creator · Competition · Cars'],
+ ['bPYV9NPpIys','Sidemen Last to Leave the Restaurant','Sidemen','Creator · Competition · Challenge'],
+ ['V1w4y2-wo6A','Guess the NBA Player ft. Cooper Flagg','Sidemen','Creator · Sports · Game Show'],
+ ['5FWDg8AT140','Sidemen Survive the Forest for 24 Hours','Sidemen','Creator · Adventure · Challenge'],
+ ['N4DU43E9-gw','Last Team Standing Wins £10,000','Sidemen','Creator · Competition · Challenge'],
+ ['NiCgcUTL9_Q','The Absurd Engineering Behind the Internet','Veritasium','Creator · Science · Engineering'],
+ ['ONAuUyml0yI','We’re Trying Something New','Veritasium','Creator · Science · Documentary'],
+ ['JsBZOcqZerk','The Real Engineering of the Enigma Machine','Veritasium','Creator · Science · History'],
+ ['J1WoNuemKOg','We Sent a Camera to Space to Film the Solar Eclipse','Veritasium','Creator · Science · Space'],
+ ['wt4p2oalmRY','Is Spider Web Really Stronger Than Steel?','Veritasium','Creator · Science · Experiment']
+];
+const creatorStart=titles.length;
+titles.push(...creatorLibrary.map(([id,title,creator,genre])=>({title,year:'Official',score:'Official Upload',rating:'YouTube',genre,runtime:'Video',desc:`An official upload from ${creator}’s YouTube channel.`,art:yt(id),embed:`https://www.youtube-nocookie.com/embed/${id}?autoplay=1`,source:`YouTube · ${creator} official channel`,sourceUrl:`https://www.youtube.com/watch?v=${id}`,license:'Standard YouTube copyright terms apply. Watching and embedding are supported; reuse or re-uploading requires permission from the rights holder.'})));
+const creatorIndices=[19,20,21,22,...creatorLibrary.map((_,index)=>creatorStart+index)];
+const rows=[['Creator Spotlight · Official Uploads',creatorIndices],['Reaction-Friendly · Creative Commons',[0,1,2,3,4,5,6,7,8]],['Public-Domain Classics',[9,10,12,13,14]],['Silent-Era Essentials',[9,10,11]],['Comedy & Animation',[0,2,4,5,15,16,17,18]],['Adventure Through the Decades',[1,3,6,7,8,13,14,9]],['Short Films',[0,1,2,5,6,7,8,11,15,16,17,18]]];
 const catalog=document.querySelector('#catalog');
 const cardMarkup=(item,index)=>`<article class="card" tabindex="0" data-details="${index}" aria-label="${item.title}, ${item.genre}"><div class="poster" style="--art:${item.art}"></div><div class="card-copy"><h3>${item.title}</h3><p><span class="match">${item.score}</span> · ${item.year} · ${item.genre}</p></div></article>`;
 rows.forEach(([name,indices])=>{const section=document.createElement('section');section.className='rail';section.id=name.startsWith('Reaction')?'new':name.startsWith('Public')?'films':name.startsWith('Comedy')?'series':name==='Short Films'?'list':'';section.innerHTML=`<div class="rail-header"><h2>${name}</h2></div><div class="rail-track">${indices.map(i=>cardMarkup(titles[i],i)).join('')}</div>`;catalog.append(section)});
